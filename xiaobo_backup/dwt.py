@@ -53,7 +53,7 @@ def corr_(data1,data2):
 def corrcoef_():
     global txt_arr,base_path
     corr_dict = {}
-    cidian_txt = read_txt('词典TF-IDF降序.txt')
+    cidian_txt = read_txt('词典TF-IDF降序.txt') #读取典型词典
     
     cdian_cd_11 = wavedec_(cidian_txt)
     for i in txt_arr:
@@ -73,12 +73,12 @@ def corrcoef_():
 
 # """ 读取数据 """
 # base_path = 'corps/政治/归一化TF-idf'
-base_path = 'corps/经济/归一化TF-idf'
+base_path = 'corps/经济/归一化TF-idf' #测试文本向量文件夹
 # base_path = 'corps/环境/归一化TF-idf'
 
 
-txt_arr = listdir_(base_path)
-corrcoef_()
+txt_arr = listdir_(base_path) #遍历读取测试文本向量，保存到一个数组中
+corrcoef_() 
 
 
 
