@@ -1,3 +1,4 @@
+import time
 # 读取指定文本
 def read_txt(path):
     txt_ = []
@@ -23,6 +24,11 @@ def precision_(arr,num):
   return (count,pre_count)
 
 # path = 'xiaobo\政治相关系数1.txt'
+
+
+start_time = time.perf_counter()  
+# 程序运行代码
+
 path = 'xiaobo\经济相关系数1.txt'
 txt_arr = read_txt(path)
 
@@ -33,5 +39,8 @@ txt_arr = read_txt(path)
 print(pre_06,pre_07,pre_08,pre_09)
 print(pre_06_count,pre_07_count,pre_08_count,pre_09_count)
 
+end_time = time.perf_counter() 
+
+print('程序运行时间: {} seconds'.format(end_time - start_time))
 
 
